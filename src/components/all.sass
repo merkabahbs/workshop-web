@@ -15,8 +15,6 @@ $body-color: #333
 $black: #2b2523
 
 $body-size: 18px
-$size-1: 1.95rem
-$size-2: 1.34rem 
 
 $gap: 30px
 
@@ -97,8 +95,12 @@ footer.footer
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
-
 @import "~bulma"
+
+h1.title
+  font-size: 35px
+h2.subtitle
+  font-size: 24px
 
 // Helper Classes
 .full-width-image-container
@@ -116,21 +118,23 @@ footer.footer
     margin-top: 23px
   h2
     margin-top: 20px!important
+    padding-right: 100px
   h1, h2
     margin-left: 1rem
   
 // responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
-
 +mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+  .full-width-image-container
+    .column
+      padding-left: 0
+    h1
+      font-size: 40px
+    h2
+      font-size: 28px
+      padding-right: 0
+    .title
+      word-break: break-all
+  
 
 
  
