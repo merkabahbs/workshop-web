@@ -1,17 +1,24 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$family-sans-serif: "Nunito", sans-serif;
+
+
+$mk-yellow: #FFBE35
+$mk-yellow-invert: #fff
+
+
+$primary: $mk-yellow
+$primary-invert: $mk-yellow-invert
 $body-color: #333
 $black: #2b2523
 
-.navbar .navbar-menu
-  box-shadow:none !important
+$body-size: 18px
+$size-1: 1.95rem
+$size-2: 1.34rem 
+
+$gap: 30px
 
 .content .taglist
   list-style: none
@@ -27,29 +34,6 @@ $black: #2b2523
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
-
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
-
-.full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
 
 .btn
     display: inline-block
@@ -85,15 +69,6 @@ footer.footer
   background-color: transparent
 
 //Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
-
-
 .menu-label
   font-size: 1em !important
   text-align: left
@@ -125,7 +100,25 @@ $menu-label-color: $white-ter
 
 @import "~bulma"
 
+// Helper Classes
+.full-width-image-container
+  width: 100vw
+  min-height: 46vh
+  position: relative
+  background-size: cover
+  align-items: center
 
+  .logo
+    width: 166.65px
+    height: 74.83px
+
+  h1
+    margin-top: 23px
+  h2
+    margin-top: 20px!important
+  h1, h2
+    margin-left: 1rem
+  
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
@@ -138,3 +131,6 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+
+
+ 
