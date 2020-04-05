@@ -31,12 +31,12 @@ export const IndexPageTemplate = ({
                 src={logo}
                 alt="Merkabah Business Solutions"
               />
-              <h1 className="has-text-white title is-size-1 has-text-weight-light">
-                <span>{headingStart}</span>
+              <h1 className="has-text-white title has-text-weight-light">
+                {headingStart}
                 <span className="has-text-primary">&nbsp;{headingYellow}</span>
-                <span>&nbsp;{headingEnd}</span>
+                &nbsp;{headingEnd}
               </h1>
-              <h2 className="has-text-white subtitle is-size-2 has-text-weight-light">
+              <h2 className="has-text-white subtitle has-text-weight-light">
                 {subheading}
               </h2>
             </div>
