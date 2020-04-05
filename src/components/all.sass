@@ -6,17 +6,19 @@ $family-sans-serif: "Nunito", sans-serif;
 
 
 $mk-yellow: #FFBE35
+$mk-blue: #003E55
 $mk-yellow-invert: #fff
 
 
 $primary: $mk-yellow
 $primary-invert: $mk-yellow-invert
-$body-color: #333
+$link: $mk-blue
+$body-color: $mk-blue
 $black: #2b2523
 
 $body-size: 18px
 
-$gap: 30px
+$gap: 45px
 
 .content .taglist
   list-style: none
@@ -62,9 +64,6 @@ $gap: 30px
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
 
 //Menu overrides
 .menu-label
@@ -73,36 +72,24 @@ footer.footer
 .menu-list
   list-style: none !important
   text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
 
-// blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
-.blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
 
 @import "~bulma"
+
+.title
+  font-weight: 300
+  font-style: normal
+  line-height: 48px
 
 h1.title
   font-size: 35px
 h2.subtitle
+  font-size: 27px
+h3.subtitle
   font-size: 24px
+h4.subtitle
+  font-size: 20px
 
-// Helper Classes
 .full-width-image-container
   width: 100vw
   min-height: 46vh
@@ -113,28 +100,51 @@ h2.subtitle
   .logo
     width: 166.65px
     height: 74.83px
+    margin-left: -27px
 
   h1
     margin-top: 23px
   h2
     margin-top: 20px!important
     padding-right: 100px
-  h1, h2
-    margin-left: 1rem
+
+footer
+  h1
+    padding-right: 150px
+  .column.is-flex
+    align-items: center
+  .column > a
+    display: flex
+    justify-content: center
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    background-color: $primary
+    margin: 0 9px 0 0
+  
   
 // responsiveness
 +mobile
   .full-width-image-container
     .column
-      padding-left: 0
+      padding-left: 23px
     h1
       font-size: 40px
     h2
       font-size: 28px
       padding-right: 0
-    .title
-      word-break: break-all
   
+  footer
+    .column
+      padding-left: 23px
+    h1.title
+      padding-right: 0
+      font-size: 40px
+      line-height: 55px
+    .column > a
+      width: 47px
+      height: 47px
+
 
 
  

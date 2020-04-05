@@ -31,14 +31,12 @@ export const IndexPageTemplate = ({
                 src={logo}
                 alt="Merkabah Business Solutions"
               />
-              <h1 className="has-text-white title has-text-weight-light">
+              <h1 className="has-text-white title">
                 {headingStart}
                 <span className="has-text-primary">&nbsp;{headingYellow}</span>
                 &nbsp;{headingEnd}
               </h1>
-              <h2 className="has-text-white subtitle has-text-weight-light">
-                {subheading}
-              </h2>
+              <h3 className="has-text-white subtitle">{subheading}</h3>
             </div>
             <div className="column is-hidden-mobile" />
           </div>
@@ -50,7 +48,9 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  heading: PropTypes.string,
+  headingStart: PropTypes.string,
+  headingYellow: PropTypes.string,
+  headingEnd: PropTypes.string,
   subheading: PropTypes.string,
 }
 
@@ -65,9 +65,6 @@ const IndexPage = ({ data }) => {
         headingYellow={frontmatter.headingYellow}
         headingEnd={frontmatter.headingEnd}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -87,7 +84,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
