@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
@@ -19,6 +18,12 @@ const TemplateWrapper = ({ children }) => {
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href={`${withPrefix('/')}img/favicon-96x96.png`}
+          sizes="96x96"
         />
         <link
           rel="icon"
@@ -43,10 +48,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
-        />
+        <meta property="og:image" content={`${withPrefix('/')}img/logo.svg`} />
       </Helmet>
       <div className="has-text-weight-light	">{children}</div>
       <Footer />
