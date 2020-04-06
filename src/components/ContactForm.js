@@ -11,6 +11,7 @@ const ContactForm = class extends React.Component {
     super(props)
 
     this.state = {
+      success: false,
       name: '',
       email: '',
       company: '',
@@ -22,19 +23,6 @@ const ContactForm = class extends React.Component {
     }
   }
 
-  clearState = () => {
-    this.setState({
-      name: '',
-      email: '',
-      company: '',
-      webpage: '',
-      employees: '',
-      sector: '',
-      time: '',
-      message: '',
-    })
-  }
-
   sendInformation = () => {
     fetch('/', {
       method: 'POST',
@@ -42,8 +30,7 @@ const ContactForm = class extends React.Component {
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
       .then(() => {
-        alert('Success!')
-        this.clearState()
+        this.setState({ success: true })
       })
       .catch(error => alert(error))
   }
@@ -56,6 +43,8 @@ const ContactForm = class extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
+    const { success } = this.state
+    
     return (
       <div className="form">
         <h1 className="title has-text-link">Inscríbete ahora</h1>
@@ -178,7 +167,12 @@ const ContactForm = class extends React.Component {
             </div>
           </div>
 
-          <input class="button is-primary" type="submit" value="Enviar" />
+          <input 
+            class="button is-primary" 
+            type="submit"
+            disabled={success}
+            value={success ? 'Enviado' : 'Enviar'} />
+
         </form>
       </div>
     )
