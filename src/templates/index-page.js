@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
               </h1>
               <h3 className="has-text-white subtitle">{subheading}</h3>
             </div>
-            <div className="column is-hidden-mobile" />
+            <div className="column is-hidden-touch" />
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ export const IndexPageTemplate = ({
               abril del 2020.
             </p>
           </div>
-          <div className="column form-column is-hidden-mobile">
+          <div className="column form-column is-hidden-touch">
             <div class="card">
               <div class="card-content">
                 <ContactForm />

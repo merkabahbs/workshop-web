@@ -59,7 +59,12 @@ const ContactForm = class extends React.Component {
     return (
       <div className="form">
         <h1 className="title has-text-link">Inscríbete ahora</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form
+          onSubmit={this.handleSubmit}
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <div class="field">
             <label class="label">Nombre y apellido</label>
             <div class="control">

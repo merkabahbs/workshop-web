@@ -15,7 +15,7 @@ const Footer = class extends React.Component {
                 Encontremos lo que te hará grande
               </h1>
             </div>
-            <div className="column is-hidden-mobile" />
+            <div className="column is-hidden-touch" />
           </div>
           <div className="columns">
             <div className="column is-flex">
@@ -40,7 +40,7 @@ const Footer = class extends React.Component {
               >
                 <img src={linkedin} alt="Linkedin" />
               </a>
-              <h4 className="subtitle is-inline is-hidden-mobile">
+              <h4 className="subtitle is-inline is-hidden-touch">
                 <a href="https://merkabahbs.com">www.merkabahbs.com</a>
               </h4>
             </div>
