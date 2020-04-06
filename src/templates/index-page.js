@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
               />
               <h1 className="has-text-white title">
                 {headingStart}
-                <span className="has-text-primary">&nbsp;{headingYellow}</span>
+                <span className="has-text-primary">{headingYellow}</span>
                 &nbsp;{headingEnd}
               </h1>
               <h3 className="has-text-white subtitle">{subheading}</h3>

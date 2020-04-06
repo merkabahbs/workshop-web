@@ -57,7 +57,7 @@ const ContactForm = class extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
         <h1 className="title has-text-link">Inscríbete ahora</h1>
         <form onSubmit={this.handleSubmit}>
           <div class="field">
@@ -160,7 +160,7 @@ const ContactForm = class extends React.Component {
             </div>
           </div>
 
-          <div class="field">
+          <div class="field vertical-margin">
             <div class="control">
               <textarea
                 class="textarea"
