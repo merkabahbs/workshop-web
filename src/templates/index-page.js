@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import ContactForm from '../components/ContactForm'
 import logo from '../img/logo.svg'
 
 export const IndexPageTemplate = ({
@@ -39,6 +40,51 @@ export const IndexPageTemplate = ({
               <h3 className="has-text-white subtitle">{subheading}</h3>
             </div>
             <div className="column is-hidden-mobile" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="section has-background-primary section-form">
+      <div className="container">
+        <div className="columns">
+          <div className="column">
+            <p>
+              Nuestra razón de ser son los emprendimientos que buscan crecer y
+              lograr tener un espacio único en el mercado. Como consultores,
+              creemos que lo mínimo que podemos hacer es ayudarte a encontrar
+              maneras de mitigar el impacto que esta crisis pueda tener sobre tu
+              negocio.
+              <br />
+              <br /> Por lo anterior, decidimos ofrecer totalmente GRATIS 10
+              talleres online a emprendedores que escogeremos dependiendo de los
+              sectores y necesidades específicas. Estos talleres consisten en la
+              capacitación e implementación de una herramienta de análisis de
+              oportunidades y selección de ideas. Las soluciones que surjan de
+              este taller equivalente a dos horas de consultoría, las estaremos
+              compartiendo en nuestro blog para que todos los emprendedores
+              tengan acceso a estas herramientas.
+              <br />
+              <br /> Inscríbete en el formulario a continuación y cuéntanos
+              acerca de tu emprendimiento. Una vez inscrito, espera nuestro
+              correo en los próximos días. Fecha límite de inscripción: 10 de
+              abril del 2020.
+            </p>
+          </div>
+          <div className="column form-column is-hidden-mobile">
+            <div class="card">
+              <div class="card-content">
+                <ContactForm />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="section is-hidden-desktop">
+      <div className="container">
+        <div className="columns">
+          <div className="column">
+            <ContactForm />
           </div>
         </div>
       </div>

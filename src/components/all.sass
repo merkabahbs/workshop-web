@@ -7,15 +7,17 @@ $family-sans-serif: "Nunito", sans-serif;
 
 $mk-yellow: #FFBE35
 $mk-blue: #003E55
-$mk-yellow-invert: #fff
+$mk-yellow-invert: #25475E
+$mk-grey: #646464
 
 
 $primary: $mk-yellow
 $primary-invert: $mk-yellow-invert
 $link: $mk-blue
 $body-color: $mk-blue
+$label-color: $mk-grey
 $black: #2b2523
-
+$body-line-height: 1.4
 $body-size: 18px
 
 $gap: 45px
@@ -100,13 +102,38 @@ h4.subtitle
   .logo
     width: 166.65px
     height: 74.83px
-    margin-left: -27px
+    margin-left: -23px
 
   h1
     margin-top: 23px
-  h2
-    margin-top: 20px!important
+  h3
+    margin-top: 20px !important
     padding-right: 100px
+
+section
+  input, textarea
+    color: $mk-grey !important
+
+  &.section-form
+    background-color: $primary
+    
+    .section
+      padding-left: 0
+    p
+      padding-right: 150px
+    .form-column
+      height: 30px
+      z-index: 1
+      position: relative
+      margin-top: -184px
+    .select, select
+      width: 100%
+
+    .button
+      height: 57px;
+      width: 131px;
+      border-radius: 45px
+      font-size: 20px;
 
 footer
   h1
@@ -125,18 +152,22 @@ footer
   
 // responsiveness
 +mobile
-  .full-width-image-container
-    .column
+  .column
       padding-left: 23px
+  .full-width-image-container
     h1
       font-size: 40px
     h2
       font-size: 28px
       padding-right: 0
+
+  
+  section
+    &.section-form
+      p
+        padding-right: 0
   
   footer
-    .column
-      padding-left: 23px
     h1.title
       padding-right: 0
       font-size: 40px
