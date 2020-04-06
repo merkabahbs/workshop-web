@@ -43,8 +43,8 @@ const ContactForm = class extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
-    const { success } = this.state
-    
+    const { success } = this.state
+
     return (
       <div className="form">
         <h1 className="title has-text-link">Inscríbete ahora</h1>
@@ -167,12 +167,12 @@ const ContactForm = class extends React.Component {
             </div>
           </div>
 
-          <input 
-            class="button is-primary" 
+          <input
+            class="button is-primary"
             type="submit"
             disabled={success}
-            value={success ? 'Enviado' : 'Enviar'} />
-
+            value={success ? 'Enviado' : 'Enviar'}
+          />
         </form>
       </div>
     )
