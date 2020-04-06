@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/home-jumbotron.jpg
+image: /img/hero-bg.png
 headingStart: Limited free
 headingYellow: workshops
 headingEnd: online
