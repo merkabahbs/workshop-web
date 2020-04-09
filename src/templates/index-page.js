@@ -65,7 +65,7 @@ export const IndexPageTemplate = ({
               <br />
               <br /> Inscríbete en el formulario a continuación y cuéntanos
               acerca de tu emprendimiento. Una vez inscrito, espera nuestro
-              correo en los próximos días. Fecha límite de inscripción: 10 de
+              correo en los próximos días. Fecha límite de inscripción: 15 de
               abril del 2020.
             </p>
           </div>
